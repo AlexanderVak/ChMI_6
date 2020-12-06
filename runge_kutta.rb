@@ -48,6 +48,15 @@ def test
   expression.results
 end
 
+def half_of_step(func, t_value,  y_value, step, borders)
+  puts '-' * 40
+  puts 'Your results with step / 2 :'
+  puts '-' * 40
+  step = step.to_f / 2.0
+  expression = RungeKutta.new(func, t_value, y_value, step, borders)
+  expression.results
+end
+
 #test
 
 puts 'Enter your formula :'
@@ -66,3 +75,5 @@ t_value = borders[0]
 puts 'Your results :'
 expression = RungeKutta.new(func, t_value, y_value, step, borders)
 expression.results
+
+half_of_step(func, t_value, y_value, step, borders)

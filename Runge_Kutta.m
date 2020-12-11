@@ -16,7 +16,7 @@ while t + h <= last_value
     result = y
 end
 x = 0:h:5;
-f_ = 2*eps.^x + x.^2 - x - 1;
+f_ = (2 * exp(x) )+ x .^2 - x - 1;
 plot(x, f(x, y_))
 hold on
 plot(x, f_,'r')
